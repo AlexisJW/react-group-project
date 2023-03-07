@@ -1,12 +1,26 @@
 import { NavLink } from 'react-router-dom';
 
-const Navbar = () => (
-  <nav className="navbar">
-    <ul>
-      <li>
-        <NavLink />
-      </li>
-    </ul>
-  </nav>
-);
+const Navbar = () => {
+  const links = [
+    {
+      text: 'My Profile',
+      link: '/profile',
+    },
+  ];
+
+  return (
+    <nav className="navbar">
+      <ul>
+        {
+          links.map((link) => (
+            <li key={link.text}>
+              <NavLink to={link.link}>{link.text}</NavLink>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  );
+};
+
 export default Navbar;
