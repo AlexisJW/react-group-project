@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <h3><b>Math Magicians</b></h3>
+  <h3><b>Space Travellers' Hub</b></h3>
 
 </div>
 
@@ -10,31 +10,31 @@
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
-- [📝 License](#license)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 \[Space Travellers' Hub\] ](#-space-travellers-hub-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+    - [Deployment](#deployment)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Math Magicians] <a name="about-project"></a>
+# 📖 [Space Travellers' Hub] <a name="about-project"></a>
 
-**[Math Magicians]** is a web application for doing calculations created with React.
+**[Space Travellers' Hub]** is a web application for space enthusiasts created with React.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -45,13 +45,18 @@
   <ul>
     <li><a href="https://reactjs.org/">React.js</a></li>
   </ul>
+  <ul>
+    <li><a>CSS</a></li>
+  </ul>
 </details>
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-- **[Calculator]**
+- **[Uso of React Hooks]**
+- **[Use of SpaceX API]**
+- **[Uso of Redux Toolkit to manage application state]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -81,14 +86,14 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone https://github.com/simplegoose/math-magicians.git
+  git clone https://github.com/AlexisJW/react-group-project.git
 ```
 ### Install
 
 Install dependencies of this project with:
 
 ```sh
-  cd my-project
+  cd react-group-project
   npm install
 ```
 -
@@ -126,6 +131,10 @@ Coming Soon!
 
 - GitHub: [@simplegoose](https://github.com/simplegoose)
 
+👤 **AlexisJW**
+
+- GitHub: [@AlexisJW](https://github.com/AlexisJW)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
@@ -158,7 +167,7 @@ If you like this project leave a star on this repo.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse.
+We would like to thank Microverse.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
