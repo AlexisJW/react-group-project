@@ -1,0 +1,27 @@
+@import 'functions/flex';
+@import 'colors';
+
+.header {
+  @include flex(row, auto, center, space-between);
+  width: 100%;
+  padding: 1.5rem 2rem;
+  border-bottom: 2px solid $light;
+
+  .logo-header {
+    @include flex(row, 1rem, center);
+  }
+  
+  h1 {
+    color: $font-grey;
+    font-size: 1.5rem;
+  }
+}
+
+.logo {
+  background-image: url('../assets/img/planet.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+}
