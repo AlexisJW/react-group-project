@@ -1,0 +1,30 @@
+@import 'functions/flex';
+@import 'colors';
+
+.navbar {
+  ul {
+    @include flex(row, 0, center);
+
+    list-style: none;
+
+    .nav-link {
+      color: $light-blue;
+
+      .link {
+        padding: 0 1rem;
+        text-decoration: none;
+        width: 100%;
+      }
+
+      .link:visited {
+        color: $light-blue;
+      }
+
+      .link.active {
+        text-decoration: underline;
+        color: $dark-blue;
+        border-left: 2px solid $grey;
+      }
+    }
+  }
+}
