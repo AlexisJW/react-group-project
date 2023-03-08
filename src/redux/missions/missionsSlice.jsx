@@ -29,14 +29,13 @@ const missionsSlice = createSlice({
     builder
       .addCase(getMissionFromApi.pending, (state) => ({ ...state, isLoading: true }))
       .addCase(getMissionFromApi.fulfilled, (state, { payload }) => {
-        const missionItems = Object.entries(payload).map(([missionId, [missionItems]]) => ({
+        const missions = Object.entries(payload).map(([missionId, missionItems]) => ({
           mission_id: missionId,
           mission_name: missionItems.mission_id,
           description: missionItems.description,
-          ...missionItems,
         }));
 
-        return { ...state, isLoading: false, missionItems };
+        return { ...state, isLoading: false, missions };
       })
       .addCase(getMissionFromApi.rejected, (state) => ({ ...state, isLoading: false }));
   },
