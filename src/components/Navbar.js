@@ -4,6 +4,10 @@ const Navbar = () => {
   const router = useLocation();
   const links = [
     {
+      text: 'Missions',
+      link: '/missions',
+    },
+    {
       text: 'My Profile',
       link: '/profile',
     },
