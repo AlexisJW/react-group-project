@@ -4,11 +4,12 @@
 .navbar {
   ul {
     @include flex(row, 0, center);
+
     list-style: none;
 
     .nav-link {
       color: $light-blue;
-      
+
       .link {
         padding: 0 1rem;
         text-decoration: none;
