@@ -1,9 +1,16 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
+  const router = useLocation();
   const links = [
-    { text: 'Rockets', link: '/' },
-    { text: 'My Profile', link: '/profile' },
+    {
+      text: 'Missions',
+      link: '/missions',
+    },
+    {
+      text: 'My Profile',
+      link: '/profile',
+    },
   ];
 
   return (
@@ -11,16 +18,8 @@ const Navbar = () => {
       <ul>
         {
           links.map((link) => (
-            <li key={link.text}>
-              <NavLink
-                to={link.link}
-                style={({ isActive }) => ({
-                  color: isActive ? 'red' : undefined,
-                })}
-              >
-                {' '}
-                {link.text}
-              </NavLink>
+            <li key={link.text} className={`nav-link ${router.pathname === link.link ? 'active' : 'inactive'}`}>
+              <NavLink to={link.link} className="link">{link.text}</NavLink>
             </li>
           ))
         }
