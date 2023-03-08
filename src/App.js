@@ -1,4 +1,4 @@
-import './App.css';
+import './sass/index.scss';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout';
 import Profile from './routes/Profile';
