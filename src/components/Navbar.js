@@ -4,6 +4,10 @@ const Navbar = () => {
   const router = useLocation();
   const links = [
     {
+      text: 'Rockets',
+      link: '/rockets',
+    },
+    {
       text: 'Missions',
       link: '/missions',
     },

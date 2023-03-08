@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getMissionFromApi } from '../redux/missions/missionsSlice';
 
@@ -6,11 +6,11 @@ const Missions = () => {
   const dispatch = useDispatch();
   const missions = useSelector((state) => state.missions.missions);
 
-  if (missions.length === 0) {
-    setTimeout(() => {
+  useEffect(() => {
+    if (missions.length === 0) {
       dispatch(getMissionFromApi());
-    }, '1000');
-  }
+    }
+  }, [missions, dispatch]);
 
   return (
     <main className="mission-main">
