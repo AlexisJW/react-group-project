@@ -2,10 +2,8 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   const links = [
-    {
-      text: 'My Profile',
-      link: '/profile',
-    },
+    { text: 'Rockets', link: '/' },
+    { text: 'My Profile', link: '/profile' },
   ];
 
   return (
@@ -14,7 +12,13 @@ const Navbar = () => {
         {
           links.map((link) => (
             <li key={link.text}>
-              <NavLink to={link.link}>{link.text}</NavLink>
+              <NavLink 
+                to={link.link}
+                style={({ isActive }) => ({
+                  color: isActive ? 'red' : undefined,
+                })}
+              > {link.text}
+              </NavLink>
             </li>
           ))
         }
