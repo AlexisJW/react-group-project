@@ -12,12 +12,14 @@ const Navbar = () => {
         {
           links.map((link) => (
             <li key={link.text}>
-              <NavLink 
+              <NavLink
                 to={link.link}
                 style={({ isActive }) => ({
                   color: isActive ? 'red' : undefined,
                 })}
-              > {link.text}
+              >
+                {' '}
+                {link.text}
               </NavLink>
             </li>
           ))

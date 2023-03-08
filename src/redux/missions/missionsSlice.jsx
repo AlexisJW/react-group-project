@@ -4,8 +4,8 @@ import axios from 'axios';
 const URL_MISSION_API = 'https://api.spacexdata.com/v3';
 
 const initialState = {
-    missions: [],
-    isLoading: true,
+  missions: [],
+  isLoading: true,
 };
 
 export const getMissionFromApi = createAsyncThunk(
@@ -23,24 +23,24 @@ export const getMissionFromApi = createAsyncThunk(
 );
 
 const missionsSlice = createSlice({
-    name: 'missions',
-    initialState,
-    extraReducers: (builder) => {
-      builder
-        .addCase(getMissionFromApi.pending, (state) => ({ ...state, isLoading: true }))
-        .addCase(getMissionFromApi.fulfilled, (state, { payload }) => {
-          const missionItems = Object.entries(payload).map(([mission_id, [missionItems]]) => ({
-            mission_id: mission_id,
-            mission_name: missionItems.mission_id,
-            description: missionItems.description,
-            ...missionItems,
-          }));
-  
-          return { ...state, isLoading: false, missionItems };
-        })
-        .addCase(getMissionFromApi.rejected, (state) => ({ ...state, isLoading: false }))
-    },
-  });
-  
-  const missionsReducer = missionsSlice.reducer;
-  export default missionsReducer;
+  name: 'missions',
+  initialState,
+  extraReducers: (builder) => {
+    builder
+      .addCase(getMissionFromApi.pending, (state) => ({ ...state, isLoading: true }))
+      .addCase(getMissionFromApi.fulfilled, (state, { payload }) => {
+        const missionItems = Object.entries(payload).map(([missionId, [missionItems]]) => ({
+          mission_id: missionId,
+          mission_name: missionItems.mission_id,
+          description: missionItems.description,
+          ...missionItems,
+        }));
+
+        return { ...state, isLoading: false, missionItems };
+      })
+      .addCase(getMissionFromApi.rejected, (state) => ({ ...state, isLoading: false }));
+  },
+});
+
+const missionsReducer = missionsSlice.reducer;
+export default missionsReducer;
