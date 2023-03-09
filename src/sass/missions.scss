@@ -32,19 +32,30 @@
         padding: 0.5rem;
         border-radius: 0.2rem;
         text-align: center;
+        color: $white;
+        white-space: nowrap;
 
-        .span-status {
+        .active-span-status {
           background-color: $dark-blue;
-          color: $white;
           padding: 0.5rem;
-          white-space: nowrap;
         }
 
-        .leave-join-btn {
+        .not-active-span-status {
+          background-color: $grey;
+          padding: 0.4rem;
+        }
+
+        .leave-btn {
           color: $shade-red;
           border: 1px solid $shade-red;
           padding: 0.5rem;
           white-space: nowrap;
+        }
+
+        .join-btn {
+          color: $grey;
+          border: 1px solid $grey;
+          padding: 0.8rem;
         }
       }
     }
