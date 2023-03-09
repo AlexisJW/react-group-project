@@ -1,0 +1,63 @@
+@import 'functions/borderCollapse.scss';
+@import 'colors';
+
+.mission-section {
+  width: 100%;
+  height: auto;
+  align-items: center;
+  padding: 8px;
+
+  table,
+  td,
+  th {
+    border: 1px solid $black;
+    border-collapse: collapse;
+
+    tbody {
+      .white-color {
+        background-color: $white;
+      }
+
+      .grey-color {
+        background-color: $light;
+      }
+
+      .description p {
+        color: $font-grey;
+        padding: 0.1rem 0 0.9rem 0.1rem;
+      }
+
+      .status-td {
+        font-size: 0.75rem;
+        padding: 0.5rem;
+        border-radius: 0.2rem;
+        text-align: center;
+        color: $white;
+        white-space: nowrap;
+
+        .active-span-status {
+          background-color: $dark-blue;
+          padding: 0.5rem;
+        }
+
+        .not-active-span-status {
+          background-color: $grey;
+          padding: 0.4rem;
+        }
+
+        .leave-btn {
+          color: $shade-red;
+          border: 1px solid $shade-red;
+          padding: 0.5rem;
+          white-space: nowrap;
+        }
+
+        .join-btn {
+          color: $grey;
+          border: 1px solid $grey;
+          padding: 0.8rem;
+        }
+      }
+    }
+  }
+}
