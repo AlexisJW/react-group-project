@@ -1,0 +1,48 @@
+@import 'colors';
+@import 'functions/flex';
+
+.rocket-card {
+  @include flex(row, 1.5rem);
+
+  margin: 1rem 0;
+
+  img {
+    max-width: 250px;
+    width: 250px;
+  }
+
+  .rocket-details {
+    @include flex(column, 1rem, flex-start, flex-start);
+
+    height: 100%;
+    color: $font-grey;
+    font-size: 1rem;
+
+    h1 {
+      color: $font-black;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.rocket-card:first-child {
+  margin-top: 0;
+}
+
+.btn {
+  border: none;
+  border-radius: 4px;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: $dark-blue;
+  color: $white;
+}
+
+.btn-secondary {
+  background-color: $white;
+  color: $grey;
+  border: 1px solid $grey;
+}
