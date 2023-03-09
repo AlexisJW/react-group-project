@@ -1,0 +1,4 @@
+@mixin borderCollapse($border: 1px solid black, $collapse: collapse) {
+  border: $border;
+  border-collapse: $collapse;
+}

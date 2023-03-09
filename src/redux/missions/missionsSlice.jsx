@@ -31,7 +31,7 @@ const missionsSlice = createSlice({
       .addCase(getMissionFromApi.fulfilled, (state, { payload }) => {
         const missions = Object.entries(payload).map(([missionId, missionItems]) => ({
           mission_id: missionId,
-          mission_name: missionItems.mission_id,
+          mission_name: missionItems.mission_name,
           description: missionItems.description,
         }));
 
