@@ -4,7 +4,10 @@ import { getMissionFromApi } from '../redux/missions/missionsSlice';
 
 const Profile = () => {
   const dispatch = useDispatch();
-  const missions = useSelector((state) => state.missions.missions);
+  const {
+    missions: { missions },
+    rockets: { rockets },
+  } = useSelector((state) => state);
 
   useEffect(() => {
     if (missions.length === 0) {
@@ -34,6 +37,30 @@ const Profile = () => {
               <tr>
                 {' '}
                 <td> No joined missions </td>
+                {' '}
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </section>
+      <section className="profile-rockets">
+        <h2> My Rockets </h2>
+        <table>
+          <tbody>
+            {rockets.length > 0 ? (
+              <>
+                {rockets.filter((rocket) => rocket.isReserved).map((rocket) => (
+                  <tr key={rocket.id}>
+                    <td>
+                      {rocket.name}
+                    </td>
+                  </tr>
+                ))}
+              </>
+            ) : (
+              <tr>
+                {' '}
+                <td> No Reserved Rockets </td>
                 {' '}
               </tr>
             )}
