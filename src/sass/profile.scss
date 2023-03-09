@@ -1,19 +1,34 @@
 @import './colors.scss';
+@import 'functions/flex';
 
 .profile-main {
-  display: flex;
+  @include flex(row, 0, flex-start, space-between);
+
   margin-top: 0.5rem;
+  padding: 1rem 1.5rem;
 
   .profile-mission {
-    width: 50%;
-    margin-left: 1.25rem;
-    margin-right: 1.25rem;
+    width: 48%;
 
     table,
     td {
-      width: 50%;
+      width: 100%;
       margin-top: 0.3rem;
-      border: 1px solid $black;
+      border: 1px solid $light;
+      border-collapse: collapse;
+      padding: 1rem;
+      color: $font-grey;
+    }
+  }
+
+  .profile-rockets {
+    width: 48%;
+
+    table,
+    td {
+      width: 100%;
+      margin-top: 0.3rem;
+      border: 1px solid $light;
       border-collapse: collapse;
       padding: 1rem;
       color: $font-grey;

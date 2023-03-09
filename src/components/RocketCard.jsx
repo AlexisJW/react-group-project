@@ -12,7 +12,6 @@ const RocketCard = ({ rocket }) => {
   const cancelReservation = () => {
     dispatch(unReserveRocket(rocket.id));
   };
-  const reserved = false;
 
   return (
     <article className="rocket-card">
@@ -20,12 +19,12 @@ const RocketCard = ({ rocket }) => {
       <div className="rocket-details">
         <h1>{rocket.name}</h1>
         <p className="rocket-description">
-          { reserved ? <span className="badge badge-info">Reserved</span> : ''}
+          { rocket.isReserved ? <span className="badge badge-info">Reserved</span> : ''}
           {' '}
           {rocket.description}
         </p>
         {
-          reserved
+          rocket.isReserved
             ? <button className="btn btn-secondary" type="button" onClick={cancelReservation}>Cancel Reservation</button>
             : <button className="btn btn-primary" type="button" onClick={handleReservation}>Reserve Rocket</button>
         }
