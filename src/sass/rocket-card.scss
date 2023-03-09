@@ -22,6 +22,10 @@
       color: $font-black;
       font-size: 1.2rem;
     }
+
+    .rocket-description {
+      line-height: 1.5;
+    }
   }
 }
 
@@ -45,4 +49,17 @@
   background-color: $white;
   color: $grey;
   border: 1px solid $grey;
+}
+
+.badge {
+  border-radius: 4px;
+  padding: 0.25rem;
+  font-size: 0.7rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.badge-info {
+  background-color: $light-blue;
+  color: $white;
 }

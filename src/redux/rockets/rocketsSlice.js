@@ -26,6 +26,16 @@ export const getRocketsFromApi = createAsyncThunk(
 const rocketsSlice = createSlice({
   name: 'rockets',
   initialState,
+  reducers: {
+    reserveRocket: (state, { payload }) => {
+      const rocket = state.rockets.find((rocket) => rocket.id === payload);
+      rocket.isReserved = true;
+    },
+    unReserveRocket: (state, { payload }) => {
+      const rocket = state.rockets.find((rocket) => rocket.id === payload);
+      rocket.isReserved = false;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getRocketsFromApi.pending, (state) => ({ ...state, isLoading: true }))
@@ -36,6 +46,7 @@ const rocketsSlice = createSlice({
           type: rocket.rocket_type,
           flickr_images: [...rocket.flickr_images],
           description: rocket.description,
+          isReserved: false,
         }));
 
         return { ...state, isLoading: false, rockets };
@@ -47,3 +58,4 @@ const rocketsSlice = createSlice({
 
 const rocketsReducer = rocketsSlice.reducer;
 export default rocketsReducer;
+export const { reserveRocket, unReserveRocket } = rocketsSlice.actions;
