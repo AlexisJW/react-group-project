@@ -3,6 +3,7 @@
 
 .profile-main {
   @include flex(row, 0, flex-start, space-between);
+
   margin-top: 0.5rem;
   padding: 1rem 1.5rem;
 
