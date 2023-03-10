@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for routes Missions renders correctly 1`] = `
+<main
+  className="mission-main"
+>
+  <section
+    className="mission-section"
+  >
+    <table>
+      <thead
+        className="text-xs text-gray-700 uppercase bg-white"
+      >
+        <tr>
+          <th
+            className="py-3 px-6 border"
+            scope="col"
+          >
+            Mission
+          </th>
+          <th
+            className="py-3 px-6 border"
+            scope="col"
+          >
+            Description
+          </th>
+          <th
+            className="py-3 px-6 border"
+            scope="col"
+          >
+            Status
+          </th>
+          <th
+            className="py-3 border"
+            scope="col"
+          >
+             
+          </th>
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </section>
+</main>
+`;
+
+exports[`Test for routes Profile renders correctly 1`] = `
+<main
+  className="profile-main"
+>
+  <section
+    className="profile-mission"
+  >
+    <h2>
+       My Missions 
+    </h2>
+    <table>
+      <tbody>
+        <tr>
+          <td>
+             No joined missions 
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <section
+    className="profile-rockets"
+  >
+    <h2>
+       My Rockets 
+    </h2>
+    <table>
+      <tbody>
+        <tr>
+           
+          <td>
+             No Reserved Rockets 
+          </td>
+           
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+`;
+
+exports[`Test for routes Rockets renders correctly 1`] = `
+<main
+  className="rockets-main"
+>
+  <section
+    className="rockets-section"
+  />
+</main>
+`;
