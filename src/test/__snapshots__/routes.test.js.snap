@@ -57,11 +57,9 @@ exports[`Test for routes Profile renders correctly 1`] = `
     <table>
       <tbody>
         <tr>
-           
           <td>
              No joined missions 
           </td>
-           
         </tr>
       </tbody>
     </table>
