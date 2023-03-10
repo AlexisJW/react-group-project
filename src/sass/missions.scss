@@ -5,13 +5,32 @@
   width: 100%;
   height: auto;
   align-items: center;
-  padding: 8px;
+  padding: 1.5rem;
 
   table,
   td,
   th {
     border: 1px solid $black;
     border-collapse: collapse;
+
+    tr {
+      th {
+        padding: 0.5rem 0.25rem;
+        vertical-align: top;
+        text-align: start;
+      }
+
+      td {
+        padding: 0.5rem 0.25rem;
+        text-align: start;
+      }
+
+      td:nth-child(1) {
+        padding: 0.5rem 0.25rem;
+        vertical-align: top;
+        text-align: start;
+      }
+    }
 
     tbody {
       .white-color {
@@ -36,13 +55,17 @@
         white-space: nowrap;
 
         .active-span-status {
-          background-color: $dark-blue;
-          padding: 0.5rem;
+          background-color: $light-blue;
+          padding: 0.3rem;
+          border-radius: 4px;
+          font-weight: bold;
         }
 
         .not-active-span-status {
           background-color: $grey;
-          padding: 0.4rem;
+          padding: 0.3rem;
+          border-radius: 4px;
+          font-weight: bold;
         }
 
         .leave-btn {
@@ -50,12 +73,14 @@
           border: 1px solid $shade-red;
           padding: 0.5rem;
           white-space: nowrap;
+          border-radius: 4px;
         }
 
         .join-btn {
           color: $grey;
           border: 1px solid $grey;
-          padding: 0.8rem;
+          padding: 0.5rem;
+          border-radius: 4px;
         }
       }
     }
