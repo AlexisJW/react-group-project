@@ -35,9 +35,7 @@ const Profile = () => {
               </>
             ) : (
               <tr>
-                {' '}
                 <td> No joined missions </td>
-                {' '}
               </tr>
             )}
           </tbody>
